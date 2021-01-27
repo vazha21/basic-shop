@@ -1,0 +1,8 @@
+<div class="container">
+  <div class="total">
+    <p>Total:${{totalAmount}}</p>
+  </div>
+  <div class="cart-items">
+    <app-item *ngFor="let item of cartItems | keyvalue" [inCart]="true" [currentItem]="item.value"></app-item>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="item">
+  <div class="icon">
+    <span class="price">${{currentItem.price}}</span>
+    <span><i class="{{currentItem.icon}}"></i></span>
+  </div>
+  <div class="title">
+    <p>{{currentItem.title}}</p>
+  </div>
+
+  <div class="description">
+    <p>{{currentItem.description}}</p>
+  </div>
+
+  <div class="buttons">
+    <button *ngIf='!inCart' class="add-to-cart" (click)="addItemToCart(currentItem)">Add To Cart</button>
+    <button *ngIf='inCart' class="remove-from-cart" (click)="removeItemFromCart(currentItem)">Remove from cart</button>
+  </div>
+
+</div>
