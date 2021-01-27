@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "vashli"
+  "defaultProject": "vashli",
+  "cli": {
+    "analytics": "017b316d-540d-430f-8f8c-32d5d120b678"
+  }
 }

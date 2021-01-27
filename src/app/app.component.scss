@@ -1,0 +1,30 @@
+header,nav,ul{
+  width:100%;
+}
+header{
+  border-bottom:2px solid #f9f6f9;
+  background:#41b3a3;
+}
+ul{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:25px;
+
+  li{
+    display:inline-block;
+    a{
+      font-size: 23px;
+      padding:7px;
+      color: white;
+
+      &:hover{
+        background:rgba(255,255,255,0.3);
+        border-radius:5px;
+      }
+    }
+  }
+}
+.activeRoute{
+  border: 1px solid white;
+}
