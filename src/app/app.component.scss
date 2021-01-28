@@ -28,3 +28,9 @@ ul{
 .activeRoute{
   border: 1px solid white;
 }
+
+.router-view{
+  width:100%;
+  position: relative;
+  height: 100%;
+}

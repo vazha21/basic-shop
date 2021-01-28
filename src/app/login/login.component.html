@@ -1,0 +1,18 @@
+<div class="form-wrapper">
+  <form action="" [formGroup]="form">
+
+    <div class="wrapper">
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Email" formControlName="email"> <br>
+    </div>
+
+    <div class="wrapper">
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Password" formControlName="password">
+    </div>
+
+    <div class="wrapper">
+      <input type="button" value="Log in" id="button" [disabled]="form.invalid" (click)="onLogin()">
+    </div>
+  </form>
+</div>

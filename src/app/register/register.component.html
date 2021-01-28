@@ -1,0 +1,22 @@
+<div class="form-wrapper">
+  <form action="" [formGroup]="form">
+    <div class="wrapper">
+      <label for="username">Username</label>
+      <input type="text" id="username" placeholder="Username" formControlName="username"> <br>
+    </div>
+
+    <div class="wrapper">
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Email" formControlName="email"> <br>
+    </div>
+
+    <div class="wrapper">
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Password" formControlName="password">
+    </div>
+
+    <div class="wrapper">
+      <input type="button" value="Register" (click)="onRegister()" id="button" [disabled]="form.invalid">
+    </div>
+  </form>
+</div>

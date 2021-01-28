@@ -1,0 +1,63 @@
+.form-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  text-align: left;
+  position: relative;
+  display: inline-block;
+  padding-top:130px;
+
+
+  .wrapper {
+    margin-bottom: 33px;
+  }
+
+  label {
+    width: 130px;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-family: monospace;
+    font-size: 24px;
+  }
+
+  input:not(#button) {
+    width: 100%;
+    padding: 16px;
+    background: #f6f6f6;
+    border: none;
+    font-size: 20px;
+
+    &::placeholder {
+      font-family: monospace;
+      font-size: 15px;
+    }
+  }
+
+  #button {
+    background: #41b3a3;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 6px 22px;
+    font-weight: bold;
+    font-size: 22px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:disabled {
+      background: rgba(65, 179, 163, 0.5);
+
+      &:hover {
+        cursor: not-allowed;
+      }
+    }
+  }
+
+
+}
