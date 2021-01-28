@@ -26,4 +26,8 @@ export class AppComponent {
       this.userLoggedIn = !!this.authService.currentLoggedUser;
     });
   }
+
+  logOut(): void {
+    this.authService.logOut();
+  }
 }
