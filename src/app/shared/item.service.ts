@@ -1,4 +1,4 @@
-import { Injectable, Output } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Item } from '../items-list/item/item.model';
 import { EventEmitter } from '@angular/core';
 
@@ -55,9 +55,7 @@ export class ItemService {
 
   getSumOfCartItems(): number {
     let sum = 0;
-    for (const [key, value] of this.cart) {
-      sum += value.price;
-    }
+    this.cart.forEach((value) => (sum += value.price));
     return sum;
   }
 }
