@@ -6,8 +6,8 @@ import { EventEmitter } from '@angular/core';
   providedIn: 'root',
 })
 export class ItemService {
-  @Output() itemDeletedInCart = new EventEmitter();
-  @Output() itemAddedInCart = new EventEmitter();
+  itemDeletedInCart = new EventEmitter();
+  itemAddedInCart = new EventEmitter();
 
   constructor() {
     this.items.set(

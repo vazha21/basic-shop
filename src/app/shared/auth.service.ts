@@ -1,16 +1,17 @@
-import { Injectable, Output } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { User } from './user.model';
 import { UserService } from './user.service';
 import { EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
   currentLoggedUser: User | null;
-  @Output() reloadSession = new EventEmitter();
+  reloadSession = new EventEmitter();
 
-  constructor(private userService: UserService) {}
+  constructor(private userService: UserService, private router: Router) {}
 
   logInUser(email: string, password: string): void {
     const user = this.userService.getUserByEmail(email);
@@ -27,10 +28,12 @@ export class AuthService {
 
     this.currentLoggedUser = user;
     this.reloadSession.emit();
+    this.router.navigate(['/items-list']);
   }
 
   logOut(): void {
     this.currentLoggedUser = null;
     this.reloadSession.emit();
+    this.router.navigate(['/login']);
   }
 }
