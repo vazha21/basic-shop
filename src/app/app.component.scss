@@ -15,22 +15,25 @@ ul{
     display:inline-block;
     a{
       font-size: 23px;
-      padding:7px;
+      padding:10px 15px;
+      border-radius: 5px;
       color: white;
 
       &:hover{
         background:rgba(255,255,255,0.3);
+        color: rgba(0,0,0,0.8);
         border-radius:5px;
       }
     }
   }
 }
 .activeRoute{
-  border: 1px solid white;
+  border: 2px solid white;
+
 }
 
 .router-view{
   width:100%;
   position: relative;
-  height: 100%;
+  height: calc(100vh - 78px);
 }

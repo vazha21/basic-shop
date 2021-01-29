@@ -3,6 +3,7 @@ import { Item } from '../items-list/item/item.model';
 export class User {
   // public cartItems?: Map<number, Item> = new Map();
   public id: number;
+  public role?: 'admin' | 'user' = 'user';
 
   constructor(
     public username: string,

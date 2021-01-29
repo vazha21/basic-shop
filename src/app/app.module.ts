@@ -10,6 +10,7 @@ import { RegisterComponent } from './register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { IsLoggedInGuard } from './guards/isLoggedIn.guard';
 import { IsLoggedOutGuard } from './guards/isLoggedOut.guard';
+import { ItemFormComponent } from './item-form/item-form.component';
 // import { IsLoggedOutGuard } from './guards/isLoggedOut.guard';
 // import { IsLoggedInGuard } from './guards/isLoggedIn.guard';
 
@@ -21,6 +22,7 @@ import { IsLoggedOutGuard } from './guards/isLoggedOut.guard';
     CartComponent,
     LoginComponent,
     RegisterComponent,
+    ItemFormComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [IsLoggedInGuard, IsLoggedOutGuard],

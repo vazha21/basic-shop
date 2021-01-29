@@ -3,6 +3,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr ;
   grid-gap: 30px;
+  padding:30px;
 
 }
 .total{
@@ -14,5 +15,12 @@
     margin-right: 20px;
     font-size: 20px;
 
+  }
+}
+
+//1226
+@media only screen and (max-width: 1226px) {
+  .cart-items{
+    grid-template-columns: 1fr 1fr;
   }
 }

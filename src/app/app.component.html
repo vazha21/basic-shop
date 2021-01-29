@@ -8,8 +8,9 @@
       <ng-container *ngIf="!userLoggedIn">
         <li><a routerLink="/login" routerLinkActive="activeRoute">Log in</a></li>
       </ng-container>
+
       <ng-container *ngIf="userLoggedIn">
-        <li><a routerLink="/cart" routerLinkActive="activeRoute">Cart({{cartCount}})</a></li>
+        <li><a routerLink="/cart" routerLinkActive="activeRoute">Cart <span *ngIf="cartCount">({{cartCount}}) </span></a></li>
       </ng-container>
       <ng-container *ngIf="userLoggedIn">
         <li (click)="logOut()"><a routerLink="/login">Log out</a></li>

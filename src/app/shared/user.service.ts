@@ -9,7 +9,10 @@ export class UserService {
   id = 1;
   public users: Map<number, User> = new Map();
 
-  constructor() {}
+  constructor() {
+    this.addNewUser(new User('vazha21', 'vazha@gmail.com', '1231231'));
+    this.users.get(1).role = 'admin';
+  }
 
   addNewUser(user: User): void {
     user.id = this.id++;

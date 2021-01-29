@@ -1,15 +1,15 @@
 export class Item {
   public constructor(
-    public id: number,
     public title: string,
     public description: string,
     public price: number,
-    public icon: string
+    public icon: string,
+    public id?: number
   ) {
-    this.id = id;
     this.title = title;
     this.description = description;
     this.price = price;
     this.icon = icon;
+    this.id = id;
   }
 }

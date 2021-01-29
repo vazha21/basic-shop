@@ -1,3 +1,10 @@
+<div class="backdrop" #backdrop></div>
+
+<div class="add-item" *ngIf="!admin" #itemForm>
+  <app-item-form></app-item-form>
+</div>
+
 <div class="container">
+  <button (click)="onAdd()" *ngIf="!admin"><i class="fa fa-plus" aria-hidden="true"></i></button>
   <app-item *ngFor="let item of items | keyvalue" [currentItem]="item.value" [inCart]="false" ></app-item>
 </div>

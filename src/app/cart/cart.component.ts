@@ -1,11 +1,10 @@
-import {Component, Input, OnInit } from '@angular/core';
-import {ItemService} from '../shared/item.service';
-import {Item} from '../items-list/item/item.model';
+import { Component, Input, OnInit } from '@angular/core';
+import { ItemService } from '../shared/item.service';
 
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
-  styleUrls: ['./cart.component.scss']
+  styleUrls: ['./cart.component.scss'],
 })
 export class CartComponent implements OnInit {
   @Input() inCart = true;
@@ -17,8 +16,5 @@ export class CartComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {
-  }
-
-
+  ngOnInit(): void {}
 }

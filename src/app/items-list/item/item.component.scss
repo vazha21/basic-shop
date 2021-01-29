@@ -1,13 +1,9 @@
 .item{
   display:grid;
   grid-template-columns: 1fr;
-  //width: 18%;
-  border:1px solid #f6f6f6;
-  border:1px solid red;
-  padding-bottom: 20px;
+  border:1px solid #dcd9d9;
   overflow: hidden;
-  min-width: 130px;
-  height: 317px;
+  min-width: 266px;
 
   .icon{
     position: relative;
@@ -24,7 +20,7 @@
       position: absolute;
       top:5px;
       right:5px;
-      font-size: 18px;
+      font-size: 25px;
       font-weight: bold;
     }
   }
@@ -37,11 +33,15 @@
 
   .description{
     padding:15px 10px;
+    height:55px;
+    text-overflow: ellipsis;
+    overflow-y: auto;
 
   }
 
   .buttons{
-    padding:10px;
+    padding: 15px 10px;
+
     button{
       border:none;
       outline:none;
