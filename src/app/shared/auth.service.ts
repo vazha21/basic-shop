@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
   currentLoggedUser: User | null;
-  reloadSession = new EventEmitter();
+  reloadSession = new EventEmitter<string>();
 
   constructor(private userService: UserService, private router: Router) {}
 
@@ -27,13 +27,13 @@ export class AuthService {
     }
 
     this.currentLoggedUser = user;
-    this.reloadSession.emit();
+    this.reloadSession.emit('login');
     this.router.navigate(['/items-list']);
   }
 
   logOut(): void {
     this.currentLoggedUser = null;
-    this.reloadSession.emit();
+    this.reloadSession.emit('logout');
     this.router.navigate(['/login']);
   }
 }

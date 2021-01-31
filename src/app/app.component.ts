@@ -23,6 +23,7 @@ export class AppComponent {
       this.cartCount = this.itemService.cart.size;
     });
     this.authService.reloadSession.subscribe(() => {
+      this.cartCount = this.itemService.cart.size;
       this.userLoggedIn = !!this.authService.currentLoggedUser;
     });
   }

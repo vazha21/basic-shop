@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Item } from '../items-list/item/item.model';
 import { EventEmitter } from '@angular/core';
+import { AuthService } from './auth.service';
 
 @Injectable({
   providedIn: 'root',
@@ -10,7 +11,14 @@ export class ItemService {
   itemAddedInCart = new EventEmitter();
   itemFormClosed = new EventEmitter();
   id = 5;
-  constructor() {
+  constructor(private authService: AuthService) {
+    this.authService.reloadSession.subscribe((event) => {
+      if (event === 'login') {
+        this.cart = this.authService.currentLoggedUser.cartItems;
+      } else {
+        this.cart = new Map();
+      }
+    });
     this.items.set(
       1,
       new Item(
